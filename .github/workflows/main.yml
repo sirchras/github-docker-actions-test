@@ -7,7 +7,7 @@ jobs:
     steps:
     - name: Hello World! action step
       id: hello
-      uses: sirchras/github-docker-actions-test@v1.1
+      uses: sirchras/github-docker-actions-test@v2
       with:
         who-to-greet: 'Chris'
     - name: Get the output time
