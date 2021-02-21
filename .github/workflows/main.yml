@@ -1,0 +1,14 @@
+on: [push]
+
+jobs:
+  hello_world:
+    runs-on: ubuntu-latest
+    name: Hello World! Job
+    steps:
+    - name: Hello World! action step
+      id: hello
+      uses: actions/github-docker-actions-test@v1
+      with:
+        who-to-greet: 'Chris'
+    - name: Get the output time
+      run: echo "The time was ${{ steps.hello.outputs.time }}"
